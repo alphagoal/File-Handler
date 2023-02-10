@@ -727,7 +727,7 @@ Sub CheckFolderExists()
 Dim strFolderName As String
 Dim strFolderExists As String
 
-    strFolderName = "N:\Temp\AC\Adhoc Tool\CSV Gen\working output\dsf"
+    strFolderName = "D:\Temp\Tool\CSV Gen\working\"
     strFolderExists = Dir(strFolderName, vbDirectory)
 
     If strFolderExists = "" Then
@@ -740,22 +740,6 @@ End Sub
 
 
 '================================================================================================
-'FOR TESTING ONLY
-
-Sub CopyWSSpecificRange()
-
-Dim CopyRange As Range
-Dim DestinationRange As Range
-Set SourceBook = Workbooks.Open("N:\Temp\AC\HKRBC spec2 vp7 comparison\(spec2 vp1) SII_2021YE_Dec_HK_LM Base_CE_FIRT_HKDIA.csv")
-
-Set CopyRange = SourceBook.Sheets(1).Range("a40:dc60")
-Set DestinationRange = ThisWorkbook.Worksheets("paste_here").Range("A1")
-
-CopyRange.Copy DestinationRange
-SourceBook.Close
-
-
-End Sub
 
 Sub deletesheet()
 
